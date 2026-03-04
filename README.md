@@ -14,11 +14,10 @@ ForensicsAI operates as a sophisticated **AI Agent**, not a conventional tool—
 ### 🔬 Recent Research & Updates
 
 - **[2026-Q1] LogicLens: Visual-Textual Co-Reasoning Agent** 📄  
-  **LogicLens: Visual-Textual Co-reasoning for Text-Centric Forgery Analysis**  [arxiv](https://arxiv.org/abs/2512.21482)
+  **LogicLens: Visual-Textual Co-reasoning for Text-Centric Forgery Analysis** [ [arxiv](https://arxiv.org/abs/2512.21482) ]
 
 - **[2026-Q1] 🏆 Challenge Organizers: DCIC 2026 Image Forgery Challenge**  
-  We are organizing the inaugural **"Image Forgery Analysis Challenge Based on Multi-Modal Large Models"** at **Digital China Innovative Competition (DCIC 2026)**—**Currently Underway!**
-  - [Join the Challenge →](https://www.dcic-china.com/competitions/10179)
+  We are organizing the inaugural **"Image Forgery Analysis Challenge Based on Multi-Modal Large Models"** at **Digital China Innovative Competition (DCIC 2026)**—**Currently Underway!** [Join the Challenge →](https://www.dcic-china.com/competitions/10179)
 
 ---
 
