@@ -2,7 +2,7 @@
 
 **Your Intelligent End-to-End Multi-Modal Risk Assessment AI Expert**
 
-ForensicsAI is an advanced AI-powered risk assessment agent dedicated to **preventing multimedia risks with intelligent automation**. Unlike traditional software platforms, ForensicsAI acts as an **autonomous expert system** that intelligently analyzes, reasons, and makes decisions across identity, document, and content security domains through end-to-end multi-modal understanding.
+ForensicsAI is an advanced AI-powered risk assessment agent dedicated to **preventing multimedia risks through intelligent automation**. As an **autonomous expert system**, it intelligently analyzes, reasons, and makes decisions across identity, document, and content security domains via end-to-end **omni-modal** understanding.
 
 ### 🤖 Agent-Powered Intelligence
 ForensicsAI operates as a sophisticated **AI Agent**, not a conventional tool—it proactively identifies risks, contextually adapts to new threats, learns from patterns, and provides intelligent recommendations across the entire multimedia security chain.
