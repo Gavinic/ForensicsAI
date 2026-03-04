@@ -5,7 +5,7 @@
 ForensicsAI is an advanced AI-powered risk assessment agent dedicated to **preventing multimedia risks through intelligent automation**. As an **autonomous expert system**, it intelligently analyzes, reasons, and makes decisions across identity, document, and content security domains via end-to-end **omni-modal** understanding.
 
 ### 🤖 Agent-Powered Intelligence
-ForensicsAI operates as a sophisticated **AI Agent**, not a conventional tool—it proactively identifies risks, contextually adapts to new threats, learns from patterns, and provides intelligent recommendations across the entire multimedia security chain.
+ForensicsAI operates as a sophisticated **AI Agent**, it proactively identifies risks, contextually adapts to new threats, learns from patterns, and provides intelligent recommendations across the entire multimedia security chain.
 
 ---
 
@@ -13,11 +13,11 @@ ForensicsAI operates as a sophisticated **AI Agent**, not a conventional tool—
 
 ### 🔬 Recent Research & Updates
 
-- **[2026-Q1] LogicLens: Visual-Textual Co-Reasoning Agent** 📄  
-  **LogicLens: Visual-Textual Co-reasoning for Text-Centric Forgery Analysis** [ [arxiv](https://arxiv.org/abs/2512.21482) ]
-
-- **[2026-Q1] 🏆 Challenge Organizers: DCIC 2026 Image Forgery Challenge**  
+- **[2026-02] 🏆 Challenge Organizers: DCIC 2026 Image Forgery Challenge**  
   We are organizing the inaugural **"Image Forgery Analysis Challenge Based on Multi-Modal Large Models"** at **Digital China Innovative Competition (DCIC 2026)**—**Currently Underway!** [Join the Challenge →](https://www.dcic-china.com/competitions/10179)
+
+- **[2025-12] LogicLens: Visual-Textual Co-Reasoning Agent** 📄  
+  **LogicLens: Visual-Textual Co-reasoning for Text-Centric Forgery Analysis** [ [arxiv](https://arxiv.org/abs/2512.21482) ]
 
 ---
 
