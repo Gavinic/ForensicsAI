@@ -20,7 +20,7 @@ ForensicsAI operates as a sophisticated **AI Agent**, it proactively identifies 
 - **[2026-02] 🏆 Challenge Organizers: DCIC 2026 Image Forgery Challenge**  
   We are organizing the inaugural **"Image Forgery Analysis Challenge Based on Multi-Modal Large Models"** at **Digital China Innovative Competition (DCIC 2026)**—**Currently Underway!** [Join the Challenge →](https://www.dcic-china.com/competitions/10179)
 
-- **[2025-12] LogicLens: Visual-Textual Co-Reasoning Agent** 📄  
+- **[2025-12] LogicLens: Visual-Textual Co-Reasoning** 📄  
   **LogicLens: Visual-Textual Co-reasoning for Text-Centric Forgery Analysis** [ [arxiv](https://arxiv.org/abs/2512.21482) ]
 
 ---
