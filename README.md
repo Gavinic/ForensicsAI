@@ -1,7 +1,7 @@
 # ForensicsAI 🔍
 
 <p align="center">
-  <img src="forensicsai.png" alt="ForensicsAI Logo" width="300">
+  <img src="assert/forensicsai.png" alt="ForensicsAI Logo" width="300">
 </p>
 
 **Your Intelligent End-to-End Multi-Modal Risk Assessment AI Expert**
