@@ -28,7 +28,15 @@ ForensicsAI operates as a sophisticated **AI Agent**, it proactively identifies 
   [DocShield-7B →](https://huggingface.co/vankey/DocShield-7B) · [DocShield-9B →](https://huggingface.co/vankey/DocShield-9B)
 
 - **[2026-04] 📦 RealText Datasets Released (V1 / V2)**
-  **RealText-V1** is a text-centric image forgery analysis dataset built to benchmark visual-logical co-reasoning over text-centric image forgeries. It pairs forged and pristine document-like text images with pixel-level manipulation masks and expert-level natural-language explanations that ground every verdict in observable visual and logical evidence. RealText-V1 is the dataset constructed and released alongside DocShield — a unified framework that formulates text-centric forgery analysis as a visual-logical co-reasoning problem via a Cross-Cues-aware Chain of Thought (CCT) and GRPO optimization with a Weighted Multi-Task Reward. **RealText-V2** — the world's first large-scale multilingual document forgery benchmark: 20K+ multimodal samples across 6 languages and 6 domains (finance, healthcare, education, etc.), 100+ attack methods from character substitution to sentence-level semantic manipulation, with expert annotations integrating pixel-level localization, attack-type classification, and natural-language explanations.
+  **RealText-V1** is a text-centric image forgery analysis dataset built to benchmark visual-logical co-reasoning over text-centric image forgeries. It pairs forged and pristine document-like text images with pixel-level manipulation masks and expert-level natural-language explanations that ground every verdict in observable visual and logical evidence. RealText-V1 is the dataset constructed and released alongside DocShield — a unified framework that formulates text-centric forgery analysis as a visual-logical co-reasoning problem via a Cross-Cues-aware Chain of Thought (CCT) and GRPO optimization with a Weighted Multi-Task Reward.
+
+  **RealText-V2: A Large-Scale Multilingual Document Forgery Analysis Benchmark** — a large-scale multilingual document benchmark dataset purpose-built for multilingual text image forgery analysis, pioneering in both scale and annotation depth.
+  - **20K+ images**: a large-scale benchmark, surpassing existing document forgery analysis datasets by orders of magnitude.
+  - **6 languages**: English, Chinese, Arabic, Thai, Malay, and Indonesian — spanning Latin, logographic, Arabic, and Thai script systems, each presenting unique forgery analysis challenges.
+  - **6 domains**: finance, education, healthcare, live streaming, e-commerce, and natural scenes.
+  - **Multi-granularity forgery**: character-level, word-level, and semantic-level tampering.
+  - **Multi-source samples**: real-world and AIGC-synthesized forgery samples covering diverse generation pipelines.
+  - **Rich multi-task annotations**: pixel-level localization masks, tampering type labels, and expert-level natural-language explanations.
   [RealText-V1 →](https://huggingface.co/datasets/vankey/RealText-V1) · [RealText-V2 →](https://huggingface.co/datasets/vankey/RealText-V2)
 
 - **[2026-02] 🏆 Challenge Organizers: DCIC 2026 Image Forgery Challenge**
