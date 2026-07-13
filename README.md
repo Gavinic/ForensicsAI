@@ -17,7 +17,21 @@ ForensicsAI operates as a sophisticated **AI Agent**, it proactively identifies 
 
 ### 🔬 Recent Research & Updates
 
-- **[2026-02] 🏆 Challenge Organizers: DCIC 2026 Image Forgery Challenge**  
+- **[2026-05] 🏆 GenText-Forensics Challenge @ ACM Multimedia 2026**
+  We are organizing **GenText-Forensics: Challenge on Explainable Forensics and Adversarial Generation for Text-Centric Images** at **ACM MM 2026** (Rio de Janeiro, 10–14 Nov 2026) — the first AI security challenge dedicated to global multilingual text-image forensics. The challenge reframes document forgery detection as a unified generative "forgery analysis" task spanning detection, spatial grounding, and natural-language explanation. Test data is released and **evaluation is open** on Codabench, supported by the RealText-V2 benchmark. [Challenge Page →](https://gentext-forensics-acm-mm-2026.github.io/)
+
+- **[2026-04] 📄 DocShield: Evidence-Grounded Agentic Reasoning**
+  **DocShield: Towards AI Document Safety via Evidence-Grounded Agentic Reasoning** — the first unified framework that formulates text-centric forgery analysis as a visual-logical co-reasoning problem. A novel Cross-Cues-aware Chain of Thought (CCT) iteratively cross-validates visual anomalies with textual semantics, and a Weighted Multi-Task Reward aligns reasoning structure, spatial evidence, and authenticity prediction via GRPO. DocShield improves macro-average F1 by **41.4%** over specialized frameworks and **23.4%** over GPT-4o on T-IC13, with consistent gains on T-SROIE. [ [arxiv](https://arxiv.org/abs/2604.02694) ]
+
+- **[2026-04] 🤗 DocShield Models Released (7B / 9B)**
+  Public checkpoints of the DocShield framework: **DocShield-7B** and **DocShield-9B** — vision-language models fine-tuned with the CCT reasoning mechanism and GRPO-based multi-task reward for evidence-grounded document forgery analysis.
+  [DocShield-7B →](https://huggingface.co/vankey/DocShield-7B) · [DocShield-9B →](https://huggingface.co/vankey/DocShield-9B)
+
+- **[2026-04] 📦 RealText Datasets Released (V1 / V2)**
+  **RealText-V1** — a multilingual dataset of document-like text images with pixel-level manipulation masks and expert-level textual explanations. **RealText-V2** — the world's first large-scale multilingual document forgery benchmark: 20K+ multimodal samples across 6 languages and 6 domains (finance, healthcare, education, etc.), 100+ attack methods from character substitution to sentence-level semantic manipulation, with expert annotations integrating pixel-level localization, attack-type classification, and natural-language explanations.
+  [RealText-V1 →](https://huggingface.co/datasets/vankey/RealText-V1) · [RealText-V2 →](https://huggingface.co/datasets/vankey/RealText-V2)
+
+- **[2026-02] 🏆 Challenge Organizers: DCIC 2026 Image Forgery Challenge**
   We are organizing the inaugural **"Image Forgery Analysis Challenge Based on Multi-Modal Large Models"** at **Digital China Innovative Competition (DCIC 2026)**—**Currently Underway!** [Join the Challenge →](https://www.dcic-china.com/competitions/10179)
 
 - **[2025-12] LogicLens: Visual-Textual Co-Reasoning** 📄  
