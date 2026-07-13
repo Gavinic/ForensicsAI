@@ -1,0 +1,145 @@
+SWA: False
+dry_run: false
+# log dir 
+log_dir: ./exps
+data_path: "<BASE_PATH>/train_data.csv"
+rgb_dir: <BASE_PATH>/data/criso
+# model setting
+pretrained: '' # not needed; HuggingFace pretrained model is loaded by default during training
+model_name: biomvit   # model name
+
+#backbone setting
+backbone_config:
+  mode: vit_huge_plus_patch16_dinov3.lvd1689m
+  #  
+  # vit_large_patch16_dinov3.sat493m
+  # vit_large_patch16_dinov3.lvd1689m
+  # vit_large_patch16_dinov3.sat493m
+  # vit_base_patch14_reg4_dinov2.lvd142m 
+  # vit_large_patch14_clip_336.openai_ft_in12k_in1k #vit_base_patch14_reg4_dinov2.lvd142m 
+  #convnext_tiny.fb_in22k_ft_in1k_384 # vit_base_patch14_dinov2.lvd142m
+  num_classes: 0
+  inc: 3
+  dropout: false
+  pretrained: true
+ 
+5_fold: false
+ema: false # whether to enable EMA
+# dataset
+## number of data slices
+split_nums: 2 # 2 8
+target_columns: [Dry_Total_g, GDM_g, Dry_Green_g,  Dry_Dead_g, Dry_Clover_g ]
+loss_columns: ['Dry_Total_g','GDM_g','Dry_Green_g',Dry_Dead_g,'Dry_Clover_g']
+loss_weights: [0.5,0.3,0.15,0.15,0.15]
+dataset_type: ''
+ckpt: '' # 
+
+
+# debug: view augmented images
+debug: false
+vis_num: 1  # should be smaller than batch size
+vis_max: 8
+
+# whether to test at the start
+test_first: false
+
+compression: c23  # compression-level for videos
+train_batchSize: 2   # training batch size
+test_batchSize: 6  # test batch size
+workers: 8   # number of data loading workers
+resolution: 1024   # resolution of output image to network
+
+# data augmentation
+use_data_augmentation: true  # Add this flag to enable/disable data augmentation
+data_aug:
+  flip_prob: 0.5
+  rotate_prob: 0.0
+  rotate_limit: [-10, 10]
+  blur_prob: 0.1
+  blur_limit: [3, 7]
+  brightness_prob: 0.3
+  brightness_limit: [-0.15, 0.15]
+  contrast_limit: [-0.1, 0.1]
+  # GridDropout: 0.0 # newly added
+  hst_prob: 0.1 # color saturation
+  hsl: 10
+  ssl: 15
+  vsl: 10
+  fpca_prob: 0.01 # RGB principal component perturbation
+  fpca_alpha: 0.1
+  ToGray: 0.00    # newly added
+  GaussNoise: 0.1  # newly added
+  quality_lower: 80
+  quality_upper: 100
+  CoarseDropout_prob: 0.3 # randomly drop grid
+
+# mean and std for normalization
+mean:  [0.485, 0.456, 0.406] 
+std:   [0.229, 0.224, 0.225] #
+
+# optimizer config
+optimizer:
+  # choose between 'adam' and 'sgd'
+  type: adamw
+  adam:
+    lr: 0.0001  #0.00002  # learning rate
+    beta1: 0.9  # beta1 for Adam optimizer
+    beta2: 0.999 # beta2 for Adam optimizer
+    eps: 0.00000001  # epsilon for Adam optimizer
+    weight_decay: 0.0005  # weight decay for regularization
+    amsgrad: false
+  sgd:
+    lr: 0.0002  # learning rate
+    momentum: 0.9  # momentum for SGD optimizer
+    weight_decay: 0.0005  # weight decay for regularization
+  adamw:
+    lr: 0.0002  #0.00002  # learning rate
+    beta1: 0.9  # beta1 for Adam optimizer
+    beta2: 0.999 # beta2 for Adam optimizer
+    eps: 0.00000001  # epsilon for Adam optimizer
+    weight_decay: 0.0005  # weight decay for regularization
+  
+
+# training config
+lr_scheduler:  # learning rate scheduler
+  type: cosine_warmup
+  step:
+    lr_step: 2
+    lr_gamma: 0.9
+  cosine:
+    lr_T_max: 100
+    lr_eta_min: 1e7
+  linear: null
+  onecycle:
+    lr_max: 0.0002
+    lr_pct: 0.08 # warmup ratio
+  cosine_warmup:
+    eta_min: 0.00001
+    start_factor: 0.01
+
+
+
+
+nEpochs: 15   # number of epochs to train for
+start_epoch: 0   # manual epoch number (useful for restarts)
+save_epoch: 1   # interval epochs for saving models
+rec_iter: 25   # interval iterations for recording
+test_iter: 100   # interval iterations for testing
+logdir: ./logs   # folder to output images and logs
+manualSeed: 1024   # manual seed for random number generation
+save_ckpt: true   # whether to save checkpoint
+save_feat: false   # whether to save features
+
+# loss function
+loss_func: smooth_l1   # loss function to use
+losstype: null
+
+# metric
+metric_scoring: weighted_r2   # metric for evaluation (mae)
+
+# cuda
+ngpu: 1   # number of GPUs to use
+cuda: true   # whether to use CUDA acceleration
+cudnn: true   # whether to use CuDNN for convolution operations
+
+save_avg: true

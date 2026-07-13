@@ -1,0 +1,137 @@
+SWA: False
+dry_run: false
+# log dir 
+log_dir: ./exps
+data_path: "<BASE_PATH>/2025_CSIRO/train_data.csv"
+rgb_dir: <BASE_PATH>/2025_CSIRO/data
+# model setting
+pretrained: '' # not needed; HuggingFace pretrained model is loaded by default during training
+model_name: biomconv   # model name
+
+#backbone setting
+backbone_config:
+  mode: convnext_large.dinov3_lvd1689m
+  # convnext_large.fb_in22k_ft_in1k_384
+  #convnext_tiny.fb_in22k_ft_in1k_384 #convnext_tiny.fb_in22k_ft_in1k_384 # vit_base_patch14_dinov2.lvd142m
+  num_classes: 0
+  inc: 3
+  dropout: false
+  pretrained: true
+
+5_fold: false # whether to use 5-fold training
+ema: false # whether to enable EMA
+# dataset
+## number of data slices
+split_nums: 2 # 2 8
+target_columns: [Dry_Green_g, Dry_Clover_g, Dry_Dead_g, Dry_Total_g, GDM_g]
+loss_columns: ['Dry_Total_g','GDM_g','Dry_Green_g']
+loss_weights: [0.5,0.2,0.1]
+dataset_type: ''
+ckpt: '' #
+
+
+# debug: view augmented images
+debug: false
+vis_num: 2  # should be smaller than batch size
+vis_max: 8
+
+# whether to test at the start
+test_first: false
+
+compression: c23  # compression-level for videos
+train_batchSize: 2   # training batch size
+test_batchSize: 8  # test batch size
+workers: 8  # number of data loading workers
+resolution: 869   # resolution of output image to network
+
+# data augmentation
+use_data_augmentation: true  # Add this flag to enable/disable data augmentation
+data_aug:
+  flip_prob: 0.5
+  rotate_prob: 0.0
+  rotate_limit: [-10, 10]
+  blur_prob: 0.0
+  blur_limit: [3, 15]
+  brightness_prob: 0.1
+  brightness_limit: [-0.15, 0.15] # brightness
+  contrast_limit: [-0.05, 0.05] # contrast
+  hst_prob: 0.01 # color saturation
+  hsl: 10
+  ssl: 15
+  vsl: 10
+  fpca_prob: 0.0 # RGB principal component perturbation
+  fpca_alpha: 0.1
+  ToGray: 0.01    # grayscale
+  GaussNoise: 0.0  # Gaussian noise
+  quality_lower: 90
+  quality_upper: 100
+  CoarseDropout_prob: 0.3 # randomly drop grid
+
+# mean and std for normalization
+mean: [0.485, 0.456, 0.406] #[0.48145466, 0.4578275, 0.40821073]
+std: [0.229, 0.224, 0.225] #[0.26862954, 0.26130258, 0.27577711]
+
+# optimizer config
+optimizer:
+  # choose between 'adam' and 'sgd'
+  type: adamw
+  adam:
+    lr: 0.001  #0.00002  # learning rate
+    beta1: 0.9  # beta1 for Adam optimizer
+    beta2: 0.999 # beta2 for Adam optimizer
+    eps: 0.00000001  # epsilon for Adam optimizer
+    weight_decay: 0.0005  # weight decay for regularization
+    amsgrad: false
+  sgd:
+    lr: 0.0002  # learning rate
+    momentum: 0.9  # momentum for SGD optimizer
+    weight_decay: 0.0005  # weight decay for regularization
+  adamw:
+    lr: 0.0002  #0.00002  # learning rate
+    beta1: 0.9  # beta1 for Adam optimizer
+    beta2: 0.999 # beta2 for Adam optimizer
+    eps: 0.00000001  # epsilon for Adam optimizer
+    weight_decay: 0.0005  # weight decay for regularization
+  
+
+# training config
+lr_scheduler:  # learning rate scheduler
+  type: cosine_warmup
+  step:
+    lr_step: 2
+    lr_gamma: 0.9
+  cosine:
+    lr_T_max: 100
+    lr_eta_min: 1e7
+  linear: null
+  onecycle:
+    lr_max: 0.0002
+    lr_pct: 0.08 # warmup ratio
+  cosine_warmup:
+    eta_min: 0.000001
+    start_factor: 0.01
+
+
+nEpochs: 15   # number of epochs to train for
+start_epoch: 0   # manual epoch number (useful for restarts)
+save_epoch: 1   # interval epochs for saving models
+rec_iter: 25   # interval iterations for recording
+test_iter: 100   # interval iterations for testing
+logdir: ./logs   # folder to output images and logs
+manualSeed: 1024   # manual seed for random number generation
+save_ckpt: true   # whether to save checkpoint
+save_feat: false   # whether to save features
+
+# loss function
+loss_func: cross_entropy   # loss function to use
+losstype: null
+
+# metric
+metric_scoring: weighted_r2   # metric for evaluation (mae)
+
+# cuda
+ngpu: 1   # number of GPUs to use
+cuda: true   # whether to use CUDA acceleration
+cudnn: true   # whether to use CuDNN for convolution operations
+
+save_avg: true
